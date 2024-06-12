@@ -154,7 +154,7 @@ class CirclesDetector:
 
             return (direction_after_first_circle, direction_after_second_circle)
 
-    def determine_direction(self, frame: np.ndarray, color_correct: bool = False) -> str:
+    def determine_direction(self, frame: np.ndarray, color_correct: bool = False) -> tuple[tuple[int, int], tuple[int, int], bool]:
         '''
         Determine the direction to move based on the position of the closest circle in the frame.
         Input:
@@ -162,8 +162,8 @@ class CirclesDetector:
             color_correct: whether to perform color correction on the image
         Returns:
             if no circles are detected, returns "no circles detected"
-            otherwise, returns str: the direction to move("up", "down", "left", "right", "forward", "stop)
-            it returns "stop" if the circle is close to the center of the frame and has a large bounding box area
+            otherwise, returns a tuple[tuple[int, int], tuple[int, int], bool]: the horizontal and vertical distances between the circle center and the image center, the direction to move in, and a boolean indicating whether to stop
+            the stop is triggered when the circle is close to the center and the ratio of the bounding box area to the frame area is greater than or equal to STOP_RATIO_THRESHOLD 
         '''
 
         # Detect circles in the frame
@@ -209,19 +209,5 @@ class CirclesDetector:
         if np.abs(delta_x) <= DELTA_X_THRESHOLD and np.abs(delta_y) <= DELTA_Y_THRESHOLD:
             # Check if the circle is close to the center in both directions
             if ratio >= STOP_RATIO_THRESHOLD:
-                return "stop"
-            return "forward"
-
-        # Determine the direction based on the signs of the horizontal and vertical distances
-        if np.abs(delta_x) > np.abs(delta_y):
-            if delta_x > DELTA_X_THRESHOLD:
-                direction = "right"
-            else:
-                direction = "left"
-        else:
-            if delta_y > DELTA_Y_THRESHOLD:
-                direction = "down"
-            else:
-                direction = "up"
-
-        return direction
+                return (delta_x, delta_y, True)
+        return (delta_x, delta_y, False)
