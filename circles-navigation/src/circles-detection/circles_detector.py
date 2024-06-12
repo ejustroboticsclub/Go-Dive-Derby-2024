@@ -4,7 +4,7 @@ from color_correct import correct
 
 DELTA_X_THRESHOLD = 10
 DELTA_Y_THRESHOLD = 10
-
+STOP_RATIO_THRESHOLD = 0.8
 
 class CirclesDetector:
     def __init__(self):
@@ -162,7 +162,8 @@ class CirclesDetector:
             color_correct: whether to perform color correction on the image
         Returns:
             if no circles are detected, returns "no circles detected"
-            otherwise, returns str: the direction to move("up", "down", "left", "right", "forward")
+            otherwise, returns str: the direction to move("up", "down", "left", "right", "forward", "stop)
+            it returns "stop" if the circle is close to the center of the frame and has a large bounding box area
         '''
 
         # Detect circles in the frame
@@ -185,6 +186,18 @@ class CirclesDetector:
         # Get the center of the closest circle
         circle_center = (closest_circle[0], closest_circle[1])
 
+        # Get the radius of the closest circle
+        r = closest_circle[2]
+
+        # Calculate the area of the frame
+        frame_area = frame.shape[0] * frame.shape[1]
+
+        # Calculate the area of the bounding box for the circle
+        bounding_box_area = (2 * r) ** 2
+
+        # Calculate the ratio of the bounding box area to the frame area
+        ratio = bounding_box_area / frame_area
+
         # Get the center of the image
         frame_center = (frame.shape[1] // 2, frame.shape[0] // 2)
 
@@ -194,6 +207,9 @@ class CirclesDetector:
 
         # Check if the circle is close to the center
         if np.abs(delta_x) <= DELTA_X_THRESHOLD and np.abs(delta_y) <= DELTA_Y_THRESHOLD:
+            # Check if the circle is close to the center in both directions
+            if ratio >= STOP_RATIO_THRESHOLD:
+                return "stop"
             return "forward"
 
         # Determine the direction based on the signs of the horizontal and vertical distances
