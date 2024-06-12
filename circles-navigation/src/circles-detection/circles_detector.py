@@ -154,7 +154,7 @@ class CirclesDetector:
 
             return (direction_after_first_circle, direction_after_second_circle)
 
-    def determine_direction(self, frame: np.ndarray, color_correct: bool = False) -> tuple[tuple[int, int], tuple[int, int], bool]:
+    def determine_direction(self, frame: np.ndarray, color_correct: bool = False) -> tuple[int, int, bool]:
         '''
         Determine the direction to move based on the position of the closest circle in the frame.
         Input:
@@ -162,7 +162,7 @@ class CirclesDetector:
             color_correct: whether to perform color correction on the image
         Returns:
             if no circles are detected, returns "no circles detected"
-            otherwise, returns a tuple[tuple[int, int], tuple[int, int], bool]: the horizontal and vertical distances between the circle center and the image center, the direction to move in, and a boolean indicating whether to stop
+            otherwise, returns a tuple[int, int, bool]: the horizontal and vertical distances between the circle center and the image center, the direction to move in, and a boolean indicating whether to stop
             the stop is triggered when the circle is close to the center and the ratio of the bounding box area to the frame area is greater than or equal to STOP_RATIO_THRESHOLD 
         '''
 
