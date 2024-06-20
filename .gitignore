@@ -1,2 +1,7 @@
 circles-navigation/notebooks/test.ipynb
 circles-navigation/notebooks/.ipynb_checkpoints
+circles-navigation/src/circles-detection/__pycache__
+circles-navigation/src/circles-detection/test2.py
+circles-navigation/src/circles-detection/video1.mp4
+circles-navigation/src/circles-detection/__pycache__/__
+circles-navigation/src/circles-detection/test.py
