@@ -4,11 +4,42 @@ from color_correct import correct
 
 DELTA_X_THRESHOLD = 10
 DELTA_Y_THRESHOLD = 10
-
+STOP_RATIO_THRESHOLD = 0.8
 
 class CirclesDetector:
     def __init__(self):
         pass
+
+    def create_red_mask(self, frame: np.ndarray) -> np.ndarray:
+        '''
+        Create a mask to detect red color in a frame.
+        Input:
+            frame: the frame(BGR format)
+        Returns:
+            np.ndarray: the mask to detect red color in the frame(2D array of 0s and 255s)
+        '''
+
+        # Apply a Gaussian blur to the frame
+        blurred_image = cv2.GaussianBlur(frame, (15, 15), cv2.BORDER_DEFAULT)
+
+        # Convert the blurred image to the HSV color space
+        hsv_image = cv2.cvtColor(blurred_image, cv2.COLOR_BGR2HSV)
+        
+        # Define lower and upper bounds for the red color in HSV
+        lower_red1 = np.array([0, 75, 20])
+        upper_red1 = np.array([10, 255, 255])
+
+        lower_red2 = np.array([160, 75, 20])
+        upper_red2 = np.array([180, 255, 255])
+
+        # Create masks to detect the red color in both specified ranges
+        lower_mask = cv2.inRange(hsv_image, lower_red1, upper_red1)
+        upper_mask = cv2.inRange(hsv_image, lower_red2, upper_red2)
+
+        # Combine the lower and upper masks to get a single mask
+        combined_mask = lower_mask + upper_mask
+        
+        return combined_mask
 
     def detect(self, frame: np.ndarray, color_correct: bool = False) -> tuple[int, np.ndarray]:
         '''
@@ -25,21 +56,21 @@ class CirclesDetector:
         # Perform color correction if necessary
         if color_correct:
             frame = correct(frame)
+        
+        # Create a mask to detect red color in the frame
+        frame = self.create_red_mask(frame)
 
-        # Convert the frame to grayscale
-        gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
-
-        # Apply a median blur to the grayscale image
-        gray = cv2.medianBlur(gray, 5)
+        # Apply median blur to the frame
+        frame = cv2.medianBlur(frame, 9)
 
         # Detect circles in the image using the Hough Circles method
         circles = cv2.HoughCircles(
-            gray,
+            frame,
             cv2.HOUGH_GRADIENT,
             dp=1,
-            minDist=200,
+            minDist=230,
             param1=50,
-            param2=30,
+            param2=10,
             minRadius=1,
             maxRadius=350,
         )
@@ -154,7 +185,7 @@ class CirclesDetector:
 
             return (direction_after_first_circle, direction_after_second_circle)
 
-    def determine_direction(self, frame: np.ndarray, color_correct: bool = False) -> str:
+    def determine_direction(self, frame: np.ndarray, color_correct: bool = False) -> tuple[int, int, bool]:
         '''
         Determine the direction to move based on the position of the closest circle in the frame.
         Input:
@@ -162,7 +193,8 @@ class CirclesDetector:
             color_correct: whether to perform color correction on the image
         Returns:
             if no circles are detected, returns "no circles detected"
-            otherwise, returns str: the direction to move("up", "down", "left", "right", "forward")
+            otherwise, returns a tuple[int, int, bool]: the horizontal and vertical distances between the circle center and the image center, the direction to move in, and a boolean indicating whether to stop
+            the stop is triggered when the circle is close to the center and the ratio of the bounding box area to the frame area is greater than or equal to STOP_RATIO_THRESHOLD 
         '''
 
         # Detect circles in the frame
@@ -185,6 +217,18 @@ class CirclesDetector:
         # Get the center of the closest circle
         circle_center = (closest_circle[0], closest_circle[1])
 
+        # Get the radius of the closest circle
+        r = closest_circle[2]
+
+        # Calculate the area of the frame
+        frame_area = frame.shape[0] * frame.shape[1]
+
+        # Calculate the area of the bounding box for the circle
+        bounding_box_area = (2 * r) ** 2
+
+        # Calculate the ratio of the bounding box area to the frame area
+        ratio = bounding_box_area / frame_area
+
         # Get the center of the image
         frame_center = (frame.shape[1] // 2, frame.shape[0] // 2)
 
@@ -194,18 +238,7 @@ class CirclesDetector:
 
         # Check if the circle is close to the center
         if np.abs(delta_x) <= DELTA_X_THRESHOLD and np.abs(delta_y) <= DELTA_Y_THRESHOLD:
-            return "forward"
-
-        # Determine the direction based on the signs of the horizontal and vertical distances
-        if np.abs(delta_x) > np.abs(delta_y):
-            if delta_x > DELTA_X_THRESHOLD:
-                direction = "right"
-            else:
-                direction = "left"
-        else:
-            if delta_y > DELTA_Y_THRESHOLD:
-                direction = "down"
-            else:
-                direction = "up"
-
-        return direction
+            # Check if the circle is close to the center in both directions
+            if ratio >= STOP_RATIO_THRESHOLD:
+                return (delta_x, delta_y, True)
+        return (delta_x, delta_y, False)
