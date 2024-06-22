@@ -4,7 +4,7 @@
 Ejust Robotics Club proudly presents Shiro Kaijen, our latest Remotely Operated Vehicle (ROV) designed for the upcoming ROV competition. Ejust Robotics Club was established in 2020 to nurture students' passion for robotics, providing them with opportunities to showcase their talents, acquire new skills, and engage in both local and international robotics competitions. This repository is dedicated to highlighting the software tasks involved in the Go Dive Derby Competition, including the development of control systems, sensor integration, and autonomous navigation.
 
 <div style="text-align:center;">
-  <img src="images/rov_competition.jpg" width="400">
+  <img src="images/team_photo.jpg" width="400">
 </div>
 
 ## Table of Contents
