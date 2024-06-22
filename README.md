@@ -26,7 +26,7 @@ In the context of the competition, the "tomb" refers to a simulated or modeled s
 
 Our work for this task can be found in the `mapping/` directory.
 
-### Task 2: Analyzing Area A
+### Task 2: Green Squares Count
 Teams will analyze a 1x1 meter banner divided into 100 squares, some green and some white. Counting the green squares accurately earns 5 points, and correctly calculating the percentage of green squares compared to the total area earns 10 points. While using image processing is allowed and may simplify this task, teams can also do this manually. Additionally, teams must estimate how the percentage of green squares has changed over a month, based on a provided photograph.
 
 Our work for this task can be found in the `green-squares-count/` directory.
