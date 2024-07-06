@@ -33,7 +33,7 @@ The source code is located at `src/autonomous-mapping`.
 1. **`src/autonomous-mapping/shape_detection.py`**
    - This Python script implements a `ShapeDetector` class. The class provides methods to load the model, perform inference on video frames or images, and draw bounding boxes around detected objects with corresponding class labels and confidence scores.
 
-1.**`src/autonomous-mapping/save_predicted_shapes.py`**
+1. **`src/autonomous-mapping/save_predicted_shapes.py`**
   - This Python script utilizes multiprocessing to concurrently capture frames from an IP camera feed of our ROV and perform real-time shape detection using the pre-trained shape detection model.
   - It integrates OpenCV for video capture and processing, and a custom `ShapeDetector` class for detecting and visualizing shapes such as cubes, cuboids, and pipes.
   - Detected shapes are recorded to a text file (`shape.txt`) and displayed on-screen with bounding boxes.
