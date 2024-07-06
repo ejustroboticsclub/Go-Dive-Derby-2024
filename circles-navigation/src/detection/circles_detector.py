@@ -10,37 +10,6 @@ class CirclesDetector:
     def __init__(self):
         pass
 
-    def create_red_mask(self, frame: np.ndarray) -> np.ndarray:
-        '''
-        Create a mask to detect red color in a frame.
-        Input:
-            frame: the frame(BGR format)
-        Returns:
-            np.ndarray: the mask to detect red color in the frame(2D array of 0s and 255s)
-        '''
-
-        # Apply a Gaussian blur to the frame
-        blurred_image = cv2.GaussianBlur(frame, (15, 15), cv2.BORDER_DEFAULT)
-
-        # Convert the blurred image to the HSV color space
-        hsv_image = cv2.cvtColor(blurred_image, cv2.COLOR_BGR2HSV)
-        
-        # Define lower and upper bounds for the red color in HSV
-        lower_red1 = np.array([0, 75, 20])
-        upper_red1 = np.array([10, 255, 255])
-
-        lower_red2 = np.array([160, 75, 20])
-        upper_red2 = np.array([180, 255, 255])
-
-        # Create masks to detect the red color in both specified ranges
-        lower_mask = cv2.inRange(hsv_image, lower_red1, upper_red1)
-        upper_mask = cv2.inRange(hsv_image, lower_red2, upper_red2)
-
-        # Combine the lower and upper masks to get a single mask
-        combined_mask = lower_mask + upper_mask
-        
-        return combined_mask
-
     def detect(self, frame: np.ndarray, color_correct: bool = False) -> tuple[int, np.ndarray]:
         '''
         Detect circles in a frame.
@@ -57,8 +26,8 @@ class CirclesDetector:
         if color_correct:
             frame = correct(frame)
         
-        # Create a mask to detect red color in the frame
-        frame = self.create_red_mask(frame)
+        # Convert the frame to grayscale
+        frame = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
 
         # Apply median blur to the frame
         frame = cv2.medianBlur(frame, 9)
