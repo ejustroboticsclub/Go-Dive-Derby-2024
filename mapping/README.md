@@ -8,6 +8,8 @@ This project involves an underwater 2D mapping task using a Remotely Operated Ve
 - [Tracking ROV's Trajectory](#tracking-rovs-trajectory)
 - [Manual Mapping](#manual-mapping)
 - [Autonomous Mapping](#autonomous-mapping)
+-[Project Structure](#project-structure)
+
 
 ## Shape Detection Model
 We used YOLOv8 for the shape detection model. Our dataset was collected by designing specific cubes, cuboids, and pipes, which were then placed underwater. Photos of these shapes were taken using our ROV's camera. The data was labeled using Roboflow. 
@@ -25,4 +27,27 @@ The source code is located at `src/manual-mapping`
 ## Autonomous Mapping
 Our autonomous approach combines the ROV path tracker with the shape detection model to facilitate underwater mapping tasks. As the ROV navigates through the environment, the path tracker continuously monitors its movement, updating a real-time map. Simultaneously, the shape detection model identifies specific objects such as pipes, cubes, and cuboids. Upon detection, these shapes are automatically placed on the map, providing an accurate and dynamic representation of the underwater terrain. This integrated approach enhances efficiency and accuracy in mapping operations, leveraging both robotic navigation capabilities and advanced object recognition technology. </br> </br>
 The source code is located at `src/autonomous-mapping`.
+
+## Project Structure
+
+1. **`src/autonomous-mapping/shape_detection.py`**
+   - This Python script implements a `ShapeDetector` class. The class provides methods to load the model, perform inference on video frames or images, and draw bounding boxes around detected objects with corresponding class labels and confidence scores.
+
+1.**`src/autonomous-mapping/save_predicted_shapes.py`**
+  - This Python script utilizes multiprocessing to concurrently capture frames from an IP camera feed of our ROV and perform real-time shape detection using the pre-trained shape detection model.
+  - It integrates OpenCV for video capture and processing, and a custom `ShapeDetector` class for detecting and visualizing shapes such as cubes, cuboids, and pipes.
+  - Detected shapes are recorded to a text file (`shape.txt`) and displayed on-screen with bounding boxes.
+
+
+1. **`src/autonomous-mapping/rov_path_visualizer.py`**
+   - This Python script integrates ROS (Robot Operating System) with Pygame for visualizing the trajectory of a Remotely Operated Vehicle (ROV) in a simulated underwater environment.
+   - It subscribes to velocity commands and IMU data from ROS topics, allowing real-time updates of the ROV's position and orientation on the graphical interface.
+   - It subscribes to messages indicating the presence of specific shapes (Cube, Cuboid, pipe), which are then visually represented on the map. This visualization aids in monitoring the ROV's path and the distribution of detected shapes during underwater exploration tasks.
+
+
+1. **`src/autonomous-mapping/shape_publisher.py`**
+   - This Python script implements a ROS 2 node (`ShapeDetectorNode`) that subscribes to a topic (`/ROV/shape`) to receive Boolean messages.
+   - It reads shape detection results from a file (`shape.txt`) and publishes boolean messages to corresponding topics (`Cube`, `Cuboid`, `pipe`) based on detected shapes.
+   - Upon publishing a True message to any of these topics (Cube, Cuboid, pipe), the corresponding shape will be plotted on the map.
+    
 
