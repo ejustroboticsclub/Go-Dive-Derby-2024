@@ -1,0 +1,17 @@
+names:
+- Ankh
+- Basket
+- Mouth
+- Owl
+- Reed
+- Water
+nc: 6
+roboflow:
+  license: Private
+  project: hieroglyphic_2
+  url: https://app.roboflow.com/nadine-mostafa-62xw4/hieroglyphic_2/1
+  version: 1
+  workspace: nadine-mostafa-62xw4
+test: yolo_train1\Hieroglyphic_2-9\new\test\images
+train: yolo_train1\Hieroglyphic_2-9\new\train\images
+val: yolo_train1\Hieroglyphic_2-9\new\val\images
