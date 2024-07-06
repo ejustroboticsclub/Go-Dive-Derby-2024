@@ -13,7 +13,7 @@ In our project, we visualize real-time navigation of our Remotely Operated Vehic
 
 
 ## Manual Mapping
-In our manual approach for the mapping task, we employ a Pygame-based graphical interface to simulate an underwater environment for tomb mapping. This interface allows us to interactively place and visualize key elements such as coffins, treasures, and papyrus rolls within a defined map area. By utilizing 3D shapes and intuitive button controls, users can strategically position these items on the map, facilitating the creation of a detailed visual representation. This manual mapping approach not only enhances our understanding of spatial relationships but also provides a practical framework for planning and executing mapping tasks in underwater scenarios. </br>
+In our manual approach for the mapping task, we employ a Pygame-based graphical interface to simulate an underwater environment for tomb mapping. This interface allows us to interactively place and visualize key elements such as coffins, treasures, and papyrus rolls within a defined map area. By utilizing 3D shapes and intuitive button controls, users can strategically position these items on the map, facilitating the creation of a detailed visual representation. This manual mapping approach not only enhances our understanding of spatial relationships but also provides a practical framework for planning and executing mapping tasks in underwater scenarios. </br> </br>
 The source code is located at
 
 ## Autonomous Mapping
