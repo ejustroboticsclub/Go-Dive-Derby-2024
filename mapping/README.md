@@ -53,4 +53,8 @@ ___
    - It reads shape detection results from a file (`shape.txt`) and publishes boolean messages to corresponding topics (`/Cube`, `/Cuboid`, `/pipe`) based on detected shapes.
    - Upon publishing a True message to any of these topics (Cube, Cuboid, pipe), the corresponding shape will be plotted on the map.
     
-
+5. **`src/manual-mapping/basic_manual_mapping_pygame.py`**
+   - This Python script uses Pygame to simulate an interactive map for underwater tomb mapping. It allows users to place and visualize various items such as a cuboid (coffin), cube (treasure chest), and circles (papyrus rolls) on a designated map area.
+  
+6. **`src/manual-mapping/updated_pygame_using_arrows.py`**
+   - This Python script uses Pygame to simulate an interactive map for underwater tomb mapping. It allows users to place and visualize various items such as a cuboid (coffin), cube (treasure chest), and circles (papyrus rolls) on a designated map area.
