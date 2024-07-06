@@ -1,41 +1,63 @@
-from shape_detection import ShapeDetector
-import cv2
-import rospy
+import rclpy
+from rclpy.node import Node
 from std_msgs.msg import Bool
 
-CAMERA_IP = "rtsp://192.168.1.120:8554/video0_unicast"
 
-shape_data = False
 
-def shape_callback(msg):
-    global shape_data
-    shape_data = msg.data
 
-def main():
-    rospy.init_node('yolo_object_detection', anonymous=True)
-    rospy.Subscriber('/ROV/shape', Bool, shape_callback)
-    detector = ShapeDetector()
-    
-    cap = cv2.VideoCapture(CAMERA_IP)    
+class ShapeDetectorNode(Node):
+    def __init__(self):
+        super().__init__("shape_detection")
+        self.path = "/home/atef/shape.txt"        
+        #self.file = open(self.path)
 
-    while True:
-        _,frame = cap.read()
-        detections = detector.get_detections(frame)
-        topic = detector.get_topic(frame, detections)
-        if (topic is not None) and shape_data:
-            pub = rospy.Publisher(topic, Bool, queue_size=10)
-            pub.publish(True)
-            pass
+        self.cube_pub = self.create_publisher(Bool, "Cube", 10)
+        self.cuboid_pub = self.create_publisher(Bool, "Cuboid", 10)
+        self.pipe_pub = self.create_publisher(Bool, "pipe", 10)
+        self.check_button = False
+        self.topic = None
         
-        frame = detector.draw_detections(frame, detections)
+        self.my_publishers = {
+            "Cube": self.cube_pub,
+            "Cuboid": self.cuboid_pub,
+            "pipe": self.pipe_pub
+        }
 
-        cv2.imshow("feed", frame)
+        self.subscription = self.create_subscription(
+            Bool,
+            '/ROV/shape',
+            self.shape_callback,
+            10
+        )
 
-        if(cv2.waitKey(1) == ord('q')):
-            break
-        
-    cap.release()
+        self.timer = self.create_timer(0.1,self.timer_callback)
+
+    def shape_callback(self, msg):
+        self.check_button = msg.data
+
+    def timer_callback(self):
+        #self.topic = self.file.read()
+        with open(self.path, 'r') as f:
+             self.topic = f.read()
+
+        print(self.topic)
+        if (self.topic != "None") and self.check_button:
+            pub = self.my_publishers.get(self.topic)
+            if pub:
+                msg = Bool()
+                msg.data = True
+                pub.publish(msg)
+
+
+
+
+def main(args=None):
+        rclpy.init(args=args)
+        shape_detector_node = ShapeDetectorNode()
+        rclpy.spin(shape_detector_node)
+        shape_detector_node.destroy()
+        rclpy.shutdown()
+
 
 if __name__ == '__main__':
     main()
-
