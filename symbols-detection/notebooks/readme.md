@@ -1,4 +1,4 @@
-##Files##
+##Files
 
 1. **symbols_detection.py**: This script contains the `SymbolsDetector` class which includes methods for detecting symbols in images and drawing bounding boxes around detected symbols.
       
