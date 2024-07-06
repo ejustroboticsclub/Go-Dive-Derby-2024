@@ -36,25 +36,25 @@ ___
 ## Scripts
 
 1. **`src/autonomous-mapping/shape_detection.py`**
-   - This Python script implements a `ShapeDetector` class. The class provides methods to load the model, perform inference on video frames or images, and draw bounding boxes around detected objects with corresponding class labels and confidence scores.
+  - This Python script implements a `ShapeDetector` class. The class provides methods to load the model, perform inference on video frames or images, and draw bounding boxes around detected objects with corresponding class labels and confidence scores.
 
-2. **`src/autonomous-mapping/save_predicted_shapes.py`**
+1. **`src/autonomous-mapping/save_predicted_shapes.py`**
   - This Python script utilizes multiprocessing to concurrently capture frames from an IP camera feed of our ROV and perform real-time shape detection using the pre-trained shape detection model.
   - It integrates OpenCV for video capture and processing, and a custom `ShapeDetector` class for detecting and visualizing shapes such as cubes, cuboids, and pipes.
   - Detected shapes are recorded to a text file (`shape.txt`) and displayed on-screen with bounding boxes.
     
-3. **`src/autonomous-mapping/rov_path_visualizer.py`**
+1. **`src/autonomous-mapping/rov_path_visualizer.py`**
   - This Python script integrates ROS (Robot Operating System) with Pygame for visualizing the trajectory of a Remotely Operated Vehicle (ROV) in a simulated underwater environment.
   - It subscribes to velocity commands and IMU data from ROS topics, allowing real-time updates of the ROV's position and orientation on the graphical interface.
   - It subscribes to messages indicating the presence of specific shapes (`/Cube`, `/Cuboid`, `/pipe`), which are then visually represented on the map. This visualization aids in monitoring the ROV's path and the distribution of detected shapes during underwater exploration tasks.
 
-4. **`src/autonomous-mapping/shape_publisher.py`**
+1. **`src/autonomous-mapping/shape_publisher.py`**
   - This Python script implements a ROS 2 node (`ShapeDetectorNode`) that subscribes to a topic (`/ROV/shape`) to receive Boolean messages.
   - It reads shape detection results from a file (`shape.txt`) and publishes boolean messages to corresponding topics (`/Cube`, `/Cuboid`, `/pipe`) based on detected shapes.
   - Upon publishing a True message to any of these topics (Cube, Cuboid, pipe), the corresponding shape will be plotted on the map.
     
-5. **`src/manual-mapping/basic_manual_mapping_pygame.py`**
+1. **`src/manual-mapping/basic_manual_mapping_pygame.py`**
   - This Python script uses Pygame to simulate an interactive map for underwater tomb mapping. It allows users to place and visualize various items such as a cuboid (coffin), cube (treasure chest), and circles (papyrus rolls) on a designated map area.
   
-6. **`src/manual-mapping/updated_pygame_using_arrows.py`**
+1. **`src/manual-mapping/updated_pygame_using_arrows.py`**
   - This Python script uses Pygame to simulate an interactive map for underwater tomb mapping. It allows users to place and visualize various items such as a cuboid (coffin), cube (treasure chest), and circles (papyrus rolls) on a designated map area.
