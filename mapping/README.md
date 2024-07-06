@@ -45,7 +45,7 @@ The source code is located at `src/autonomous-mapping`.
 
 4. **`src/autonomous-mapping/shape_publisher.py`**
    - This Python script implements a ROS 2 node (`ShapeDetectorNode`) that subscribes to a topic (`/ROV/shape`) to receive Boolean messages.
-   - It reads shape detection results from a file (`shape.txt`) and publishes boolean messages to corresponding topics (`Cube`, `Cuboid`, `pipe`) based on detected shapes.
+   - It reads shape detection results from a file (`shape.txt`) and publishes boolean messages to corresponding topics (`/Cube`, `/Cuboid`, `/pipe`) based on detected shapes.
    - Upon publishing a True message to any of these topics (Cube, Cuboid, pipe), the corresponding shape will be plotted on the map.
     
 
