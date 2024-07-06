@@ -37,7 +37,7 @@ The source code is located at `src/autonomous-mapping`.
   - This Python script utilizes multiprocessing to concurrently capture frames from an IP camera feed of our ROV and perform real-time shape detection using the pre-trained shape detection model.
   - It integrates OpenCV for video capture and processing, and a custom `ShapeDetector` class for detecting and visualizing shapes such as cubes, cuboids, and pipes.
   - Detected shapes are recorded to a text file (`shape.txt`) and displayed on-screen with bounding boxes.
-
+    
 1. **`src/autonomous-mapping/rov_path_visualizer.py`**
    - This Python script integrates ROS (Robot Operating System) with Pygame for visualizing the trajectory of a Remotely Operated Vehicle (ROV) in a simulated underwater environment.
    - It subscribes to velocity commands and IMU data from ROS topics, allowing real-time updates of the ROV's position and orientation on the graphical interface.
