@@ -7,7 +7,6 @@ This project involves an underwater 2D mapping task using a Remotely Operated Ve
 We used YOLOv8 for the shape detection model. Our dataset was collected by designing specific cubes, cuboids, and pipes, which were then placed underwater. Photos of these shapes were taken using our ROV's camera. The data was labeled using Roboflow. 
 - The data used in training is located at `data/processed`.
 - The best trained model is located at `models/best.pt`.
-- The source code is located at `src/shape-detection`.
 
 ## Tracking ROV's Trajectory
 In our project, we visualize real-time navigation of our Remotely Operated Vehicle (ROV) in a simulated underwater pool environment. We've integrated Pygame for graphical rendering and ROS (Robot Operating System) for communication and data handling. Our setup tracks the ROV's movement by subscribing to velocity commands and IMU (Inertial Measurement Unit) data. This allows us to monitor and analyze the ROV's path in a dynamic underwater setting, providing crucial insights for our mapping and exploration task.
