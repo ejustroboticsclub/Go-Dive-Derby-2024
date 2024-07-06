@@ -8,7 +8,7 @@ This project involves an underwater 2D mapping task using a Remotely Operated Ve
 - [Tracking ROV's Trajectory](#tracking-rovs-trajectory)
 - [Manual Mapping](#manual-mapping)
 - [Autonomous Mapping](#autonomous-mapping)
--[Project Structure](#project-structure)
+- [Project Structure](#project-structure)
 
 
 ## Shape Detection Model
