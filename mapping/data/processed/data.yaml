@@ -1,0 +1,9 @@
+path: '//content//gdrive//My Drive//ROV Videos//Training Colab//data'
+train: '//content//gdrive//My Drive//ROV Videos//Training Colab/data//train//images'
+val: '//content//gdrive//My Drive//ROV Videos//Training Colab/data//train//images'
+test: '//content//gdrive//My Drive//ROV Videos//Training Colab/data//train//images'
+
+names:
+  0: Cube
+  1: Cuboid
+  2: pipe
