@@ -215,7 +215,13 @@ ___
    roscore
    ```
   
-7. Open another terminal and type this command to run ROS1 bridge:
+7. Open another terminal and type these commands to run ROS1 bridge:
+   ```
+   noetic
+   ```
+   ```
+   foxy
+   ```
    ```
    ros2 run ros1_bridge dynamic_bridge
    ```
