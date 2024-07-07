@@ -64,6 +64,7 @@ ___
 
 ## Requirements
 
+- **`Python 3.7+`**
 - **`rospy`**: ROS Python client library for ROS communication.
 - **`tf`**: ROS library for transformations between coordinate frames.
 - **`rclpy`**: ROS 2 Python client library for ROS 2 communication.
