@@ -180,3 +180,31 @@ ___
 ___
 
 ## Run the ROV
+
+1. Connect to ejust wifi network. Passward is 12345678.
+  
+2. Change your IP address to be static (manual), and set it to: 192.168.1.69
+
+3. Reconnect to ejust.
+
+4. Open a terminal and type these commands to run ROS1 roscore:
+   ```
+   noetic
+   ```
+   ```
+   roscore
+   ```
+  
+5. Open another terminal and type these commands to run ROS1 bridge:
+   ```
+   ros2 run ros1_bridge dynamic_bridge
+   ```
+
+6. Open another terminal and access the main raspberry to run all the sensors and thrusters.
+   ```
+   ssh ubuntu@192.168.1.120
+   ```
+   The password is `turtlebot`. Inside the raspberry's terminal, type this command:
+   ```
+   launch_all
+   ```
