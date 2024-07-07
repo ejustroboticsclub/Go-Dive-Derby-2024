@@ -33,7 +33,7 @@ If the driver is not installed, you can install it manually. Follow this [link](
 4. **Install anaconda**: Follow this [link](https://www.anaconda.com/download/).
 
 5. Create a new environment named GPU.
-```
-conda create -n gpu python=3.9
-```
+    ```
+    conda create -n gpu python=3.9
+    ```
 
