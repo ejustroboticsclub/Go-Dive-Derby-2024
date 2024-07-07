@@ -14,24 +14,24 @@ This project involves the development of a system for autonomously navigating a 
 - [License](#license)
 
 
-Our approach to achieve autonomous navigation through the circles involves several key steps:
+Our approach to achieving autonomous navigation through the circles involves several key steps:
 
-1. Real-time Circle Detection:
+1. **Real-time Circle Detection**:
    - Capturing frames from the ROV's camera.
    - Detecting circles in the frames using the Hough Circle Transform method.
    - Displaying the detected circles on the frame.
 
-3. Autonomous Control:
-Subscribing to the ROV's depth information.
-Using a pre-trained circle detection model to identify circle positions.
-Calculating the required movement directions (dx, dy, dz) to navigate through the detected circles.
-Publishing velocity commands to the ROV based on the detected circles and the calculated movement directions.
-Adjusting the ROV's path based on feedback from the circle detector to ensure it passes through each circle correctly.
-GUI for Orientation and Confirmation:
+2. **Autonomous Control**:
+   - Subscribing to the ROV's depth information.
+   - Using the circle detection algorithm to identify circle positions.
+   - Calculating the required movement directions (dx, dy, dz) to navigate through the detected circles.
+   - Publishing velocity commands to the ROV based on the detected circles and the calculated movement directions.
+   - Adjusting the ROV's path based on feedback from the circle detector to ensure it passes through each circle correctly.
 
-Allowing the user to set orientations for the circles using radio buttons.
-Displaying the current orientations and allowing the user to confirm the detected circles.
-If confirmed, the system proceeds with autonomous control using the selected orientations.
+3. **GUI for Orientation and Confirmation**:
+   - Allowing the pilot to set the orientations for the circles using radio buttons. The orientation indicates the position of each circle relative to the previous one. For example, {"right", "left"} means that the second circle is to the right of the first circle, and the third circle is to the left of the second circle.
+   - Displaying the current orientations and allowing the pilot to confirm the detected circles.
+   - If confirmed, the system proceeds with autonomous control using the selected orientations.
 
 
 ## Project Structure
