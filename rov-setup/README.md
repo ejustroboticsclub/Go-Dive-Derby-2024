@@ -112,7 +112,7 @@ ___
     ```
     nano ~/.bashrc
     ```
-At the end of the file write:
+    At the end of the file write:
     ```
     alias noetic="source /opt/ros/noetic/setup.bash"
     ```
