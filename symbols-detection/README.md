@@ -26,3 +26,20 @@ Before training, we conducted extensive preprocessing on the dataset to enhance 
 - **Rotation**: Correcting image orientation to standardize input for the model.
 - **Grayscale Conversion**: Converting images to grayscale to reduce computation complexity and focus on symbol shape.
 - **Adaptive Thresholding**: Applying adaptive thresholding techniques to binarize images based on local pixel intensities, enhancing symbol visibility.
+- **Data Augmentation**: The following augmentation parameters were applied:
+     - Rotation: Between −14◦ and +14◦
+     - Blur: Up to 1.9 px
+     - Outputs per training example: 3
+
+## Results
+
+The following table shows the values of the precision and recall of the validation set on each class.
+<p align="center">
+  <img src="images/results.png" width="600" height="400">
+</p>
+
+In our hieroglyphic symbol detection task, precision and recall are crucial. The model must be accurate and
+reliable to prevent mislabeling symbols, which could distort our interpretation of ancient inscriptions. Additionally, the model needs to recall all instances of the classes in an image to ensure a comprehensive understanding of the inscriptions.
+<br> <br>
+
+From the table, we can see that our model successfully detected all instances of basket, owl, and reed symbols, with only slight losses in other classes. Regarding precision, the model accurately detected nearly all instances without any false positives for the classes of ankh, and basket, with minor losses in the mouth, owl, and reed classes. The slight reductions in precision and recall are acceptable given the competition’s conditions and the hardware limitations.
