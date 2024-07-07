@@ -4,7 +4,7 @@ This project involves the development of a system for autonomously navigating a 
 
 ## Table of Contents
 
-- [How it Works?](#how-it-works?)
+- [How it Works?](#how-it-works)
 - [Scripts](#scripts)
 
 
