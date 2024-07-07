@@ -72,3 +72,26 @@ If the driver is not installed, you can install it manually. Follow this [link](
     ```
     pip install --upgrade nbconvert
     ```
+
+11. Useful utils.
+    ```
+    pip3 install opencv-python
+    ```
+    ```
+    conda install -c conda-forge matplotlib
+    ```
+    ```
+    conda install -c anaconda pillow
+    ```
+    ```
+    conda update pillow
+    ```
+    ```
+    pip3 install numpy==1.23
+    ```
+    ```
+    conda install -c anaconda scikit-learn
+    ```
+    ```
+    conda install -c anaconda pandas
+    ```
