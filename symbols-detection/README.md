@@ -1,14 +1,17 @@
-# Folder Structure
-1. `data/`: Stores various datasets and information crucial for this task.
-     - `data/external`: Contains datasets and information sourced from external sources, such as publicly available datasets, third-party providers, or other research projects. These datasets may include images, videos, sensor data, or other types of input data used for training and testing AI models.
-     - `data/interim`: Serves as an intermediate stage in the data preprocessing pipeline. It typically contains partially processed or temporary data files generated during the data preparation phase.
-     - `data/processed`: Stores the finalized and processed datasets ready for training AI models.
-1. `images/`: Contains the images used in this directory, including those utilized for making predictions.
-1. `models/`: Stores models used for AI training in this task.
-   - `models/best-models`: stores the best-performing models selected from the trained models based on certain criteria, such as performance metrics like accuracy, precision, or loss.
-   - `models/trained-models`: Contains all trained models, including intermediate models generated during the training process.  
-1. `notebooks/`: Contains Jupyter notebooks used for various purposes within this task.
-1. `results/`: Stores the output, findings, and outcomes generated from various analyses, experiments, or simulations conducted as part of this task. 
-1. `src/`: Serves as the main source code folder for this task.
-     - `src/models`: Contains scripts to train models and then use trained models to make predictions.
-     - `src/visualization`: Contains scripts to create exploratory and results-oriented visualizations.
+# Symbols Detection
+
+## Overview
+our team developed an AI model aimed at accurately identifying symbols displayed on a banner. This task is crucial for earning points based on the correct recognition of all symbols present.
+
+
+## Approach
+We utilized a YOLOv8-based computer vision model trained on a custom dataset containing six hieroglyphic symbols. The development process involved iterative rounds of image preprocessing and model fine-tuning to achieve satisfactory performance aligned with the competition's objectives.
+
+## Dataset
+- The dataset consists of images containing six hieroglyphic symbols. Each image in the dataset is annotated with bounding boxes that precisely delineate the location of each symbol.
+- The images were collected from these sources:
+     - [Source 1](https://github.com/morrisfranken/glyphreader)
+     - [Source 2](https://www.metmuseum.org/about-the-met/collection-areas/egyptian-art)
+     - [Source 3](https://www.flickr.com/photos/profzucker/)
+     - [Source 4](https://stock.adobe.com/search?k=egypt+hieroglyphics)
+
