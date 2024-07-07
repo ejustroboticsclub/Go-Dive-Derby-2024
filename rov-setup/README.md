@@ -119,6 +119,9 @@ ___
     ```
     alias foxy="source /opt/ros/foxy/setup.bash"
     ```
+<p align="center">
+  <img src="images/bashrc.png" width="500" height="300">
+</p>
+
 
 5. 
-
