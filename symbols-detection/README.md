@@ -1,7 +1,7 @@
 # Symbols Detection
 
 ## Overview
-our team developed an AI model aimed at accurately identifying symbols displayed on a banner. This task is crucial for earning points based on the correct recognition of all symbols present.
+Our team developed an AI model aimed at accurately identifying symbols displayed on a banner. This task is crucial for earning points based on the correct recognition of all symbols present.
 
 ## Table of Contents
 1. [Approach](#approach)
