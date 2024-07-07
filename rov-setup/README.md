@@ -215,7 +215,7 @@ ___
    roscore
    ```
   
-7. Open another terminal and type these commands to run ROS1 bridge:
+7. Open another terminal and type this command to run ROS1 bridge:
    ```
    ros2 run ros1_bridge dynamic_bridge
    ```
@@ -230,7 +230,8 @@ ___
    ```
 
 9. Open another terminal and navigate to the `colcon_ws` directory.
-  
+
+
 10. If you did not build the workspace before or you changed something inside the workspace, type the following command to build it.
    ```
    colcon build
