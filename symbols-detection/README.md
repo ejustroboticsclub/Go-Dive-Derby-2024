@@ -60,7 +60,7 @@ In our hieroglyphic symbol detection task, precision and recall are crucial. The
 reliable to prevent mislabeling symbols, which could distort our interpretation of ancient inscriptions. Additionally, the model needs to recall all instances of the classes in an image to ensure a comprehensive understanding of the inscriptions.
 <br> <br>
 
-From the table, we can see that our model successfully detected all instances of basket, owl, and reed symbols, with only slight losses in other classes. Regarding precision, the model accurately detected nearly all instances without any false positives for the classes of ankh, and basket, with minor losses in the mouth, owl, and reed classes. The slight reductions in precision and recall are acceptable given the competition’s conditions and the hardware limitations.
+From the table, we can see that our model was able to recall almost all the symbols of the Mouth, Reed, and Owl symbols with slight loss in the other classes. Regarding precision, the model accurately detected most of the instances with few occurrences of false positives for the classes of Owl and Mouth with minor losses in the Water, Ankh, Reed, and Basket classes. The slight reductions in precision and recall are acceptable given the competition’s conditions and the hardware limitations.
 
 ___
 
