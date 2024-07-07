@@ -60,7 +60,7 @@ ___
   
 6. **`src/manual-mapping/updated_pygame_using_arrows.py`**
    - This script creates an interactive Pygame application for an underwater tomb mapping simulation, allowing the user to place various items on a map and control a Remotely Operated Vehicle (ROV).
-   - Users can move in the map using the arrow keys on the keyboard, and when the Enter key is pressed, the selected shape is placed on the map.
+   - Users can move inside the 2D map using the arrow keys on the keyboard, and when the Enter key is pressed, the selected shape is placed on the map.
   
 ___
 
