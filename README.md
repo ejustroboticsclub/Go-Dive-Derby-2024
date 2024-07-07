@@ -10,8 +10,6 @@ Ejust Robotics Club proudly presents Shiro Kaijen, our latest Remotely Operated 
 ## Table of Contents
 1. [About the Competition](#about-the-competition)
 1. [Software Tasks](#software-tasks) 
-1. [Team Members](#team-members)
-1. [Demo](#demo)
 
 
 ## About the Competition
@@ -49,10 +47,3 @@ Teams will navigate a simulated pipeline represented by three circles positioned
 Our work for this task can be found in the `circles-navigation/` directory.
 
 
-## Team Members
-- **[Name]** - [Role]: [Contribution]
-- **[Name]** - [Role]: [Contribution]
-- **[Name]** - [Role]: [Contribution]
-
-
-## Demo
