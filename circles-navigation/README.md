@@ -17,11 +17,11 @@ This project involves the development of a system for autonomously navigating a 
 Our approach to achieve autonomous navigation through the circles involves several key steps:
 
 1. Real-time Circle Detection:
-     - Capturing frames from the ROV's camera.
-     - Detecting circles in the frames using the Hough Circle Transform method.
-     - Displaying the detected circles on the frame.
+   - Capturing frames from the ROV's camera.
+   - Detecting circles in the frames using the Hough Circle Transform method.
+   - Displaying the detected circles on the frame.
 
-2. Autonomous Control:
+3. Autonomous Control:
 Subscribing to the ROV's depth information.
 Using a pre-trained circle detection model to identify circle positions.
 Calculating the required movement directions (dx, dy, dz) to navigate through the detected circles.
