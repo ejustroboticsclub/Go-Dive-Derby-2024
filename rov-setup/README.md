@@ -124,4 +124,44 @@ ___
 </p>
 
 
-5. 
+5. Testing the installation of ROS1 and ROS2.
+   - Open a terminal and type these commands to run ROS1 roscore:
+     ```
+     noetic
+     ```
+     ```
+     roscore
+     ```
+   - Open another terminal and type these commands to run ROS1 bridge:
+     ```
+     noetic
+     ```
+     ```
+     foxy
+     ```
+     ```
+     ros2 run ros1_bridge dynamic_bridge
+     ```
+   - On another terminal, run ROS1 turtlesim_node:
+     ```
+     noetic
+     ```
+     ```
+     rosrun turtlesim turtlesim_node
+     ```
+   - On another terminal, run ROS2 turtle_teleop_key:
+     ```
+     foxy
+     ```
+     ```
+     ros2 run turtlesim turtle_teleop_key
+     ```
+<p align="center">
+  <img src="images/turtlesim1.png" width="500" height="300">
+</p>
+
+<br> <br>
+
+<p align="center">
+  <img src="images/turtlesim2.png" width="500" height="300">
+</p>
