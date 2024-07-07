@@ -1,4 +1,4 @@
-# Symbols Detection
+# Underwater Symbols Detection
 
 ## Overview
 Our team developed an AI model aimed at accurately identifying symbols displayed on a banner. This task is crucial for earning points based on the correct recognition of all symbols present.
