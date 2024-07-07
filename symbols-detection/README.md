@@ -35,7 +35,7 @@ Before training, we conducted extensive preprocessing on the dataset to enhance 
 
 The following table shows the values of the precision and recall of the validation set on each class.
 <p align="center">
-  <img src="images/results.png" width="500" height="200">
+  <img src="images/results.png" width="500" height="300">
 </p>
 
 In our hieroglyphic symbol detection task, precision and recall are crucial. The model must be accurate and
