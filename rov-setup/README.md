@@ -37,3 +37,38 @@ If the driver is not installed, you can install it manually. Follow this [link](
     conda create -n gpu python=3.9
     ```
 
+6. Activate this environment.
+    ```
+    conda activate gpu
+    ```
+
+7. Install pytorch gpu.
+    ```
+    conda install pytorch torchvision torchaudio pytorch-cuda=12.1 -c pytorch -c nvidia
+    ```
+
+8. Install ultralytics.
+    ```
+    pip install ultralytics
+    ```
+
+9. Install tensorflow gpu (optional).
+    ```
+    conda install -c anaconda tensorflow-gpu
+    ```
+    ```
+    conda install -c conda-forge keras
+    ```
+10. Notebook support.
+    ```
+    conda install -c anaconda ipython
+    ```
+    ```
+    conda install ipykernel
+    ```
+    ```
+    conda install nb_conda_kernels
+    ```
+    ```
+    pip install --upgrade nbconvert
+    ```
