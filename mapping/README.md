@@ -55,10 +55,12 @@ ___
    - Upon publishing a True message to any of these topics (Cube, Cuboid, pipe), the corresponding shape will be plotted on the map.
     
 5. **`src/manual-mapping/basic_manual_mapping_pygame.py`**
-   - This Python script uses Pygame to simulate an interactive map for underwater tomb mapping. It allows users to place and visualize various items such as a cuboid (coffin), cube (treasure chest), and circles (papyrus rolls) on a designated map area.
+   - This Python script uses Pygame to simulate an interactive map for underwater tomb mapping.
+   - It allows users to place and visualize various items such as a cuboid (coffin), cube (treasure chest), and circles (papyrus rolls) on a designated map area.
   
 6. **`src/manual-mapping/updated_pygame_using_arrows.py`**
-   - This Python script uses Pygame to simulate an interactive map for underwater tomb mapping. It allows users to place and visualize various items such as a cuboid (coffin), cube (treasure chest), and circles (papyrus rolls) on a designated map area.
+   - This script creates an interactive Pygame application for an underwater tomb mapping simulation, allowing the user to place various items on a map and control a Remotely Operated Vehicle (ROV).
+   - Users can move in the map using the arrow keys on the keyboard, and when the Enter key is pressed, the selected shape is placed on the map.
   
 ___
 
