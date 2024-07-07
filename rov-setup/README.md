@@ -7,6 +7,7 @@ This section provides guidelines for setting up the workstation environment nece
 - [Gstreamer Setup](#gstreamer-setup)
 - [GPU Setup](#gpu-setup)
 - [ROS Installations](#ros-installations)
+- [Run the ROV](#run-the-rov)
 
 ___
 
@@ -165,3 +166,17 @@ ___
 <p align="center">
   <img src="images/turtlesim2.png" width="500" height="300">
 </p>
+
+
+6. Install tf-transformations
+    ```
+    sudo apt install ros-foxy-tf-transformations
+    ```
+7. Install pygame on the Python interpreter accessible to ROS2.
+    ```
+    pip install pygame
+    ```
+
+___
+
+## Run the ROV
