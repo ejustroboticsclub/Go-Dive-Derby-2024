@@ -3,9 +3,18 @@
 ## Overview
 our team developed an AI model aimed at accurately identifying symbols displayed on a banner. This task is crucial for earning points based on the correct recognition of all symbols present.
 
+## Table of Contents
+1. [Approach](#approach)
+2. [Dataset](#dataset)
+3. [Data Preparation](#data-preparation)
+4. [Results](#results)
+
+___
 
 ## Approach
 We utilized a YOLOv8-based computer vision model trained on a custom dataset containing six hieroglyphic symbols. The development process involved iterative rounds of image preprocessing and model fine-tuning to achieve satisfactory performance aligned with the competition's objectives.
+
+___
 
 ## Dataset
 - The dataset consists of images containing six hieroglyphic symbols. Each image in the dataset is annotated with bounding boxes that precisely delineate the location of each symbol.
@@ -18,6 +27,8 @@ We utilized a YOLOv8-based computer vision model trained on a custom dataset con
 - There are six classes in the data set: Ankh, Basket, Mouth, Owl, Reed, and Water.
 - Total Number of Images: 1599 images, Train Set: 70% (1120 images), Validation Set: 15% (239 images), Test Set: 15% (240 images).
 
+___
+
 ## Data Preparation
 
 Before training, we conducted extensive preprocessing on the dataset to enhance the model's performance:
@@ -27,9 +38,11 @@ Before training, we conducted extensive preprocessing on the dataset to enhance 
 - **Grayscale Conversion**: Converting images to grayscale to reduce computation complexity and focus on symbol shape.
 - **Adaptive Thresholding**: Applying adaptive thresholding techniques to binarize images based on local pixel intensities, enhancing symbol visibility.
 - **Data Augmentation**: The following augmentation parameters were applied:
-     - Rotation: Between −14◦ and +14◦
-     - Blur: Up to 1.9 px
-     - Outputs per training example: 3
+     - Rotation: Between −14◦ and +14◦ (Each image is rotated randomly within this range to create variations).
+     - Blur: Up to 1.9 px (Each image is blurred with a random blur intensity up to 1.9 pixels).
+     - Outputs per training example: 3 (For each original image in the dataset, the data augmentation process generates three different augmented versions. These versions are variations of the original image, each modified according to the specified augmentation parameters: rotation and blur).
+
+___
 
 ## Results
 
