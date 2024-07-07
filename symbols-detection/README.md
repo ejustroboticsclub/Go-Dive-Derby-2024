@@ -8,6 +8,7 @@ Our team developed an AI model aimed at accurately identifying symbols displayed
 2. [Dataset](#dataset)
 3. [Data Preparation](#data-preparation)
 4. [Results](#results)
+5. [Requirements](#requirements)
 
 ___
 
@@ -59,3 +60,11 @@ reliable to prevent mislabeling symbols, which could distort our interpretation 
 <br> <br>
 
 From the table, we can see that our model successfully detected all instances of basket, owl, and reed symbols, with only slight losses in other classes. Regarding precision, the model accurately detected nearly all instances without any false positives for the classes of ankh, and basket, with minor losses in the mouth, owl, and reed classes. The slight reductions in precision and recall are acceptable given the competition’s conditions and the hardware limitations.
+
+
+___
+
+## Requirements
+- **`ultralytics`**: (YOLOv8): Deep learning library for object detection.
+- **`opencv-python`**: (cv2): OpenCV library for computer vision tasks.
+- **`multiprocessing`**: Python module for spawning processes using an API similar to threading.
