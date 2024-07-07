@@ -1,15 +1,74 @@
-# Folder Structure
-1. `data/`: Stores various datasets and information crucial for this task.
-     - `data/external`: Contains datasets and information sourced from external sources, such as publicly available datasets, third-party providers, or other research projects. These datasets may include images, videos, sensor data, or other types of input data used for training and testing AI models.
-     - `data/interim`: Serves as an intermediate stage in the data preprocessing pipeline. It typically contains partially processed or temporary data files generated during the data preparation phase.
-     - `data/processed`: Stores the finalized and processed datasets ready for training AI models.
-1. `images/`: Contains the images used in this directory, including those utilized for making predictions.
-1. `models/`: Stores models used for AI training in this task.
-   - `models/best-models`: stores the best-performing models selected from the trained models based on certain criteria, such as performance metrics like accuracy, precision, or loss.
-   - `models/trained-models`: Contains all trained models, including intermediate models generated during the training process.  
-1. `notebooks/`: Contains Jupyter notebooks used for various purposes within this task.
-1. `results/`: Stores the output, findings, and outcomes generated from various analyses, experiments, or simulations conducted as part of this task. 
-1. `src/`: Serves as the main source code folder for this task.
-     - `src/models`: Contains scripts to train models and then use trained models to make predictions.
-     - `src/visualization`: Contains scripts to create exploratory and results-oriented visualizations.
-     - `src/control`: Contains source code related to the control system of the ROV. It contains scripts, modules, or packages responsible for controlling the various aspects of the ROV's behavior, including movement, navigation, sensor interaction, and communication with external devices or systems.
+# ROV Autonomous Navigation and Circle Detection
+
+This project involves the development of a system for autonomously navigating a Remotely Operated Vehicle (ROV) through a series of circles using real-time image processing and ROS 2. The system includes real-time circle detection, autonomous control, and a GUI for setting orientations and confirming detected circles. Each circle has a diameter of 80 cm and is positioned 10 cm above the ground. The goal is to successfully navigate each circle without rotating the ROV. 
+
+## Table of Contents
+
+- [Project Structure](#project-structure)
+  - [real_time_circles_detection.py](#real_time_circles_detectionpy)
+  - [autonomous_control.py](#autonomous_controlpy)
+  - [orientations_and_confirmation.py](#orientations_and_confirmationpy)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
+
+
+Our approach to achieve autonomous navigation through the circles involves several key steps:
+
+1. Real-time Circle Detection:
+     - Capturing frames from the ROV's camera.
+     - Detecting circles in the frames using the Hough Circle Transform method.
+     - Displaying the detected circles on the frame.
+
+2. Autonomous Control:
+Subscribing to the ROV's depth information.
+Using a pre-trained circle detection model to identify circle positions.
+Calculating the required movement directions (dx, dy, dz) to navigate through the detected circles.
+Publishing velocity commands to the ROV based on the detected circles and the calculated movement directions.
+Adjusting the ROV's path based on feedback from the circle detector to ensure it passes through each circle correctly.
+GUI for Orientation and Confirmation:
+
+Allowing the user to set orientations for the circles using radio buttons.
+Displaying the current orientations and allowing the user to confirm the detected circles.
+If confirmed, the system proceeds with autonomous control using the selected orientations.
+
+
+## Project Structure
+
+### `real_time_circles_detection.py`
+This script captures frames from a camera feed and detects circles in real-time using the `CirclesDetector` class.
+
+#### Functions
+
+- **capture_frames(queue, camera_ip)**: Captures frames from the specified camera feed and puts them in a queue.
+- **detect_and_display(queue)**: Detects circles in the frames and displays the feed with detected circles highlighted.
+- **main()**: Initializes the queue and starts the processes for frame capturing and circle detection.
+
+### `autonomous_control.py`
+This script controls an ROV autonomously using ROS 2, navigating through detected circles.
+
+#### AutomaticController Class
+
+- **depth_callback(msg)**: Callback function for depth subscription.
+- **cmd(dx, dy, dz)**: Sets the velocity command for the ROV.
+- **timer_callback()**: Periodic function to process the current frame and update the ROV's velocity.
+
+#### Functions
+
+- **main(args=None)**: Initializes the ROS 2 node and starts the camera feed and control loop.
+
+### `orientations_and_confirmation.py`
+This script provides a GUI for setting circle orientations and confirming images. It starts the autonomous control script with the specified orientations upon confirmation.
+
+#### GUIsmol Class
+
+- **change_orientations()**: Updates the current orientations based on user input.
+- **confirm_circles()**: Confirms the detected circles and starts the autonomous control script if confirmed.
+
+## Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/yourusername/rov-navigation.git
+   cd rov-navigation
