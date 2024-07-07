@@ -15,8 +15,11 @@ ___
 
 ## Shape Detection Model
 We used YOLOv8 for the shape detection model. Our dataset was collected by designing specific cubes, cuboids, and pipes, which were then placed underwater. Photos of these shapes were taken using our ROV's camera. The data was labeled using Roboflow. 
+- The dataset consists of 2428 images along with their labels.
 - The data used in training is located at `data/processed`.
+- The results after training are located as `results/`.
 - The best trained model is located at `models/best.pt`.
+- The model achieved an accuracy with a precision of 99.70%, recall of 77.26%, mAP@0.5 of 85.67%, and mAP@0.5:0.95 of 84.64%, demonstrating its effectiveness in underwater environments.
 ___
 
 ## Tracking ROV's Trajectory
