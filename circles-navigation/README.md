@@ -7,7 +7,7 @@ This project involves the development of a system for autonomously navigating a 
 - [How it Works?](#how-it-works)
 - [Scripts](#scripts)
 
-
+___
 
 ## How it Works?
 
@@ -31,7 +31,7 @@ Our approach to achieving autonomous navigation through the circles involves sev
    - If confirmed, the system proceeds with autonomous control using the selected orientations.
 
 
-
+___
 ## Scripts
 1. **`src/detect/real_time_circles_detection.py`**:
    - Captures frames from the camera.
