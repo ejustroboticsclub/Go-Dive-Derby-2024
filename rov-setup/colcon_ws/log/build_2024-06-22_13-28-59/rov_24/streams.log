@@ -1,0 +1,75 @@
+[0.723s] Invoking command in '/home/abdelrhman/rov/colcon_ws/src/rov_24': PYTHONPATH=/home/abdelrhman/rov/colcon_ws/build/rov_24/prefix_override:/home/abdelrhman/rov/colcon_ws/install/rov_24/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/rov_24 build --build-base /home/abdelrhman/rov/colcon_ws/build/rov_24/build install --record /home/abdelrhman/rov/colcon_ws/build/rov_24/install.log --single-version-externally-managed
+[0.962s] running egg_info
+[0.963s] writing ../../build/rov_24/rov_24.egg-info/PKG-INFO
+[0.963s] writing dependency_links to ../../build/rov_24/rov_24.egg-info/dependency_links.txt
+[0.963s] writing entry points to ../../build/rov_24/rov_24.egg-info/entry_points.txt
+[0.964s] writing requirements to ../../build/rov_24/rov_24.egg-info/requires.txt
+[0.964s] writing top-level names to ../../build/rov_24/rov_24.egg-info/top_level.txt
+[1.008s] reading manifest file '../../build/rov_24/rov_24.egg-info/SOURCES.txt'
+[1.009s] writing manifest file '../../build/rov_24/rov_24.egg-info/SOURCES.txt'
+[1.009s] running build
+[1.009s] running build_py
+[1.010s] copying rov_24/Automatic_control.py -> /home/abdelrhman/rov/colcon_ws/build/rov_24/build/lib/rov_24
+[1.010s] copying rov_24/color_correct.py -> /home/abdelrhman/rov/colcon_ws/build/rov_24/build/lib/rov_24
+[1.010s] copying rov_24/Detection.py -> /home/abdelrhman/rov/colcon_ws/build/rov_24/build/lib/rov_24
+[1.011s] copying rov_24/copilot.py -> /home/abdelrhman/rov/colcon_ws/build/rov_24/build/lib/rov_24
+[1.011s] copying rov_24/motion_control.py -> /home/abdelrhman/rov/colcon_ws/build/rov_24/build/lib/rov_24
+[1.011s] copying rov_24/movement_feedback.py -> /home/abdelrhman/rov/colcon_ws/build/rov_24/build/lib/rov_24
+[1.011s] copying rov_24/joystick.py -> /home/abdelrhman/rov/colcon_ws/build/rov_24/build/lib/rov_24
+[1.012s] running install
+[1.013s] running install_lib
+[1.014s] creating /home/abdelrhman/rov/colcon_ws/install/rov_24/lib/python3.8/site-packages/rov_24
+[1.014s] copying /home/abdelrhman/rov/colcon_ws/build/rov_24/build/lib/rov_24/bridge.py -> /home/abdelrhman/rov/colcon_ws/install/rov_24/lib/python3.8/site-packages/rov_24
+[1.014s] copying /home/abdelrhman/rov/colcon_ws/build/rov_24/build/lib/rov_24/Automatic_control.py -> /home/abdelrhman/rov/colcon_ws/install/rov_24/lib/python3.8/site-packages/rov_24
+[1.014s] copying /home/abdelrhman/rov/colcon_ws/build/rov_24/build/lib/rov_24/Autonomous_task_main.py -> /home/abdelrhman/rov/colcon_ws/install/rov_24/lib/python3.8/site-packages/rov_24
+[1.015s] copying /home/abdelrhman/rov/colcon_ws/build/rov_24/build/lib/rov_24/color_correct.py -> /home/abdelrhman/rov/colcon_ws/install/rov_24/lib/python3.8/site-packages/rov_24
+[1.015s] copying /home/abdelrhman/rov/colcon_ws/build/rov_24/build/lib/rov_24/pilot.py -> /home/abdelrhman/rov/colcon_ws/install/rov_24/lib/python3.8/site-packages/rov_24
+[1.015s] copying /home/abdelrhman/rov/colcon_ws/build/rov_24/build/lib/rov_24/bridge1.py -> /home/abdelrhman/rov/colcon_ws/install/rov_24/lib/python3.8/site-packages/rov_24
+[1.015s] copying /home/abdelrhman/rov/colcon_ws/build/rov_24/build/lib/rov_24/pilot_interface.py -> /home/abdelrhman/rov/colcon_ws/install/rov_24/lib/python3.8/site-packages/rov_24
+[1.016s] copying /home/abdelrhman/rov/colcon_ws/build/rov_24/build/lib/rov_24/pilot2.py -> /home/abdelrhman/rov/colcon_ws/install/rov_24/lib/python3.8/site-packages/rov_24
+[1.016s] copying /home/abdelrhman/rov/colcon_ws/build/rov_24/build/lib/rov_24/motion_gripper.py -> /home/abdelrhman/rov/colcon_ws/install/rov_24/lib/python3.8/site-packages/rov_24
+[1.016s] copying /home/abdelrhman/rov/colcon_ws/build/rov_24/build/lib/rov_24/copilot_interface.py -> /home/abdelrhman/rov/colcon_ws/install/rov_24/lib/python3.8/site-packages/rov_24
+[1.016s] copying /home/abdelrhman/rov/colcon_ws/build/rov_24/build/lib/rov_24/Detection.py -> /home/abdelrhman/rov/colcon_ws/install/rov_24/lib/python3.8/site-packages/rov_24
+[1.017s] copying /home/abdelrhman/rov/colcon_ws/build/rov_24/build/lib/rov_24/copilot.py -> /home/abdelrhman/rov/colcon_ws/install/rov_24/lib/python3.8/site-packages/rov_24
+[1.017s] copying /home/abdelrhman/rov/colcon_ws/build/rov_24/build/lib/rov_24/motion_control.py -> /home/abdelrhman/rov/colcon_ws/install/rov_24/lib/python3.8/site-packages/rov_24
+[1.017s] copying /home/abdelrhman/rov/colcon_ws/build/rov_24/build/lib/rov_24/main.py -> /home/abdelrhman/rov/colcon_ws/install/rov_24/lib/python3.8/site-packages/rov_24
+[1.017s] copying /home/abdelrhman/rov/colcon_ws/build/rov_24/build/lib/rov_24/movement_feedback.py -> /home/abdelrhman/rov/colcon_ws/install/rov_24/lib/python3.8/site-packages/rov_24
+[1.017s] copying /home/abdelrhman/rov/colcon_ws/build/rov_24/build/lib/rov_24/__init__.py -> /home/abdelrhman/rov/colcon_ws/install/rov_24/lib/python3.8/site-packages/rov_24
+[1.017s] copying /home/abdelrhman/rov/colcon_ws/build/rov_24/build/lib/rov_24/test.py -> /home/abdelrhman/rov/colcon_ws/install/rov_24/lib/python3.8/site-packages/rov_24
+[1.018s] copying /home/abdelrhman/rov/colcon_ws/build/rov_24/build/lib/rov_24/joystick.py -> /home/abdelrhman/rov/colcon_ws/install/rov_24/lib/python3.8/site-packages/rov_24
+[1.018s] copying /home/abdelrhman/rov/colcon_ws/build/rov_24/build/lib/rov_24/stabilization.py -> /home/abdelrhman/rov/colcon_ws/install/rov_24/lib/python3.8/site-packages/rov_24
+[1.018s] byte-compiling /home/abdelrhman/rov/colcon_ws/install/rov_24/lib/python3.8/site-packages/rov_24/bridge.py to bridge.cpython-38.pyc
+[1.019s] byte-compiling /home/abdelrhman/rov/colcon_ws/install/rov_24/lib/python3.8/site-packages/rov_24/Automatic_control.py to Automatic_control.cpython-38.pyc
+[1.021s] byte-compiling /home/abdelrhman/rov/colcon_ws/install/rov_24/lib/python3.8/site-packages/rov_24/Autonomous_task_main.py to Autonomous_task_main.cpython-38.pyc
+[1.021s] byte-compiling /home/abdelrhman/rov/colcon_ws/install/rov_24/lib/python3.8/site-packages/rov_24/color_correct.py to color_correct.cpython-38.pyc
+[1.023s] byte-compiling /home/abdelrhman/rov/colcon_ws/install/rov_24/lib/python3.8/site-packages/rov_24/pilot.py to pilot.cpython-38.pyc
+[1.024s] byte-compiling /home/abdelrhman/rov/colcon_ws/install/rov_24/lib/python3.8/site-packages/rov_24/bridge1.py to bridge1.cpython-38.pyc
+[1.025s] byte-compiling /home/abdelrhman/rov/colcon_ws/install/rov_24/lib/python3.8/site-packages/rov_24/pilot_interface.py to pilot_interface.cpython-38.pyc
+[1.026s] byte-compiling /home/abdelrhman/rov/colcon_ws/install/rov_24/lib/python3.8/site-packages/rov_24/pilot2.py to pilot2.cpython-38.pyc
+[1.026s] byte-compiling /home/abdelrhman/rov/colcon_ws/install/rov_24/lib/python3.8/site-packages/rov_24/motion_gripper.py to motion_gripper.cpython-38.pyc
+[1.027s] byte-compiling /home/abdelrhman/rov/colcon_ws/install/rov_24/lib/python3.8/site-packages/rov_24/copilot_interface.py to copilot_interface.cpython-38.pyc
+[1.031s] byte-compiling /home/abdelrhman/rov/colcon_ws/install/rov_24/lib/python3.8/site-packages/rov_24/Detection.py to Detection.cpython-38.pyc
+[1.032s] byte-compiling /home/abdelrhman/rov/colcon_ws/install/rov_24/lib/python3.8/site-packages/rov_24/copilot.py to copilot.cpython-38.pyc
+[1.035s] byte-compiling /home/abdelrhman/rov/colcon_ws/install/rov_24/lib/python3.8/site-packages/rov_24/motion_control.py to motion_control.cpython-38.pyc
+[1.036s] byte-compiling /home/abdelrhman/rov/colcon_ws/install/rov_24/lib/python3.8/site-packages/rov_24/main.py to main.cpython-38.pyc
+[1.036s] byte-compiling /home/abdelrhman/rov/colcon_ws/install/rov_24/lib/python3.8/site-packages/rov_24/movement_feedback.py to movement_feedback.cpython-38.pyc
+[1.038s] byte-compiling /home/abdelrhman/rov/colcon_ws/install/rov_24/lib/python3.8/site-packages/rov_24/__init__.py to __init__.cpython-38.pyc
+[1.038s] byte-compiling /home/abdelrhman/rov/colcon_ws/install/rov_24/lib/python3.8/site-packages/rov_24/test.py to test.cpython-38.pyc
+[1.039s] byte-compiling /home/abdelrhman/rov/colcon_ws/install/rov_24/lib/python3.8/site-packages/rov_24/joystick.py to joystick.cpython-38.pyc
+[1.039s] byte-compiling /home/abdelrhman/rov/colcon_ws/install/rov_24/lib/python3.8/site-packages/rov_24/stabilization.py to stabilization.cpython-38.pyc
+[1.040s] running install_data
+[1.040s] copying resource/rov_24 -> /home/abdelrhman/rov/colcon_ws/install/rov_24/share/ament_index/resource_index/packages
+[1.041s] copying package.xml -> /home/abdelrhman/rov/colcon_ws/install/rov_24/share/rov_24
+[1.041s] copying launch/launch_file.launch.py -> /home/abdelrhman/rov/colcon_ws/install/rov_24/share/rov_24/launch
+[1.041s] copying launch/automatic.launch.py -> /home/abdelrhman/rov/colcon_ws/install/rov_24/share/rov_24/launch
+[1.041s] running install_egg_info
+[1.043s] Copying ../../build/rov_24/rov_24.egg-info to /home/abdelrhman/rov/colcon_ws/install/rov_24/lib/python3.8/site-packages/rov_24-0.0.0-py3.8.egg-info
+[1.044s] running install_scripts
+[1.061s] Installing auto script to /home/abdelrhman/rov/colcon_ws/install/rov_24/lib/rov_24
+[1.062s] Installing bridge script to /home/abdelrhman/rov/colcon_ws/install/rov_24/lib/rov_24
+[1.062s] Installing gui script to /home/abdelrhman/rov/colcon_ws/install/rov_24/lib/rov_24
+[1.062s] Installing joystick script to /home/abdelrhman/rov/colcon_ws/install/rov_24/lib/rov_24
+[1.063s] Installing motion_control script to /home/abdelrhman/rov/colcon_ws/install/rov_24/lib/rov_24
+[1.063s] Installing movement_feedback script to /home/abdelrhman/rov/colcon_ws/install/rov_24/lib/rov_24
+[1.063s] writing list of installed files to '/home/abdelrhman/rov/colcon_ws/build/rov_24/install.log'
+[1.084s] Invoked command in '/home/abdelrhman/rov/colcon_ws/src/rov_24' returned '0': PYTHONPATH=/home/abdelrhman/rov/colcon_ws/build/rov_24/prefix_override:/home/abdelrhman/rov/colcon_ws/install/rov_24/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/rov_24 build --build-base /home/abdelrhman/rov/colcon_ws/build/rov_24/build install --record /home/abdelrhman/rov/colcon_ws/build/rov_24/install.log --single-version-externally-managed

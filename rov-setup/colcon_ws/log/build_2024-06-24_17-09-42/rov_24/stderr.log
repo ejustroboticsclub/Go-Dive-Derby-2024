@@ -1,0 +1,2 @@
+/home/abdelrhman/rov/colcon_ws/install/rov_24/lib/python3.8/site-packages/rov_24/movement_feedback.py:486: SyntaxWarning: 'int' object is not callable; perhaps you missed a comma?
+  (-1)(self.PARAM.thruster_max - self.PARAM.thruster_min) / 2,

@@ -1,0 +1,26 @@
+[0.515s] Invoking command in '/home/mahmoud/rov/colcon_ws/src/rov_24': PYTHONPATH=/home/mahmoud/rov/colcon_ws/build/rov_24/prefix_override:/home/mahmoud/rov/colcon_ws/install/rov_24/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/rov_24 build --build-base /home/mahmoud/rov/colcon_ws/build/rov_24/build install --record /home/mahmoud/rov/colcon_ws/build/rov_24/install.log --single-version-externally-managed install_data
+[0.672s] running egg_info
+[0.672s] writing ../../build/rov_24/rov_24.egg-info/PKG-INFO
+[0.673s] writing dependency_links to ../../build/rov_24/rov_24.egg-info/dependency_links.txt
+[0.673s] writing entry points to ../../build/rov_24/rov_24.egg-info/entry_points.txt
+[0.673s] writing requirements to ../../build/rov_24/rov_24.egg-info/requires.txt
+[0.673s] writing top-level names to ../../build/rov_24/rov_24.egg-info/top_level.txt
+[0.698s] reading manifest file '../../build/rov_24/rov_24.egg-info/SOURCES.txt'
+[0.698s] writing manifest file '../../build/rov_24/rov_24.egg-info/SOURCES.txt'
+[0.698s] running build
+[0.699s] running build_py
+[0.700s] running install
+[0.700s] running install_lib
+[0.702s] running install_data
+[0.702s] running install_egg_info
+[0.704s] removing '/home/mahmoud/rov/colcon_ws/install/rov_24/lib/python3.8/site-packages/rov_24-0.0.0-py3.8.egg-info' (and everything under it)
+[0.704s] Copying ../../build/rov_24/rov_24.egg-info to /home/mahmoud/rov/colcon_ws/install/rov_24/lib/python3.8/site-packages/rov_24-0.0.0-py3.8.egg-info
+[0.705s] running install_scripts
+[0.717s] Installing auto script to /home/mahmoud/rov/colcon_ws/install/rov_24/lib/rov_24
+[0.717s] Installing bridge script to /home/mahmoud/rov/colcon_ws/install/rov_24/lib/rov_24
+[0.717s] Installing gui script to /home/mahmoud/rov/colcon_ws/install/rov_24/lib/rov_24
+[0.717s] Installing joystick script to /home/mahmoud/rov/colcon_ws/install/rov_24/lib/rov_24
+[0.717s] Installing motion_control script to /home/mahmoud/rov/colcon_ws/install/rov_24/lib/rov_24
+[0.718s] Installing movement_feedback script to /home/mahmoud/rov/colcon_ws/install/rov_24/lib/rov_24
+[0.718s] writing list of installed files to '/home/mahmoud/rov/colcon_ws/build/rov_24/install.log'
+[0.737s] Invoked command in '/home/mahmoud/rov/colcon_ws/src/rov_24' returned '0': PYTHONPATH=/home/mahmoud/rov/colcon_ws/build/rov_24/prefix_override:/home/mahmoud/rov/colcon_ws/install/rov_24/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/rov_24 build --build-base /home/mahmoud/rov/colcon_ws/build/rov_24/build install --record /home/mahmoud/rov/colcon_ws/build/rov_24/install.log --single-version-externally-managed install_data

@@ -1,0 +1,26 @@
+[0.727s] Invoking command in '/home/abdelrhman/rov/colcon_ws/src/rov_24': PYTHONPATH=/home/abdelrhman/rov/colcon_ws/build/rov_24/prefix_override:/home/abdelrhman/rov/colcon_ws/install/rov_24/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/rov_24 build --build-base /home/abdelrhman/rov/colcon_ws/build/rov_24/build install --record /home/abdelrhman/rov/colcon_ws/build/rov_24/install.log --single-version-externally-managed
+[0.962s] running egg_info
+[0.962s] writing ../../build/rov_24/rov_24.egg-info/PKG-INFO
+[0.962s] writing dependency_links to ../../build/rov_24/rov_24.egg-info/dependency_links.txt
+[0.963s] writing entry points to ../../build/rov_24/rov_24.egg-info/entry_points.txt
+[0.963s] writing requirements to ../../build/rov_24/rov_24.egg-info/requires.txt
+[0.963s] writing top-level names to ../../build/rov_24/rov_24.egg-info/top_level.txt
+[0.996s] reading manifest file '../../build/rov_24/rov_24.egg-info/SOURCES.txt'
+[0.997s] writing manifest file '../../build/rov_24/rov_24.egg-info/SOURCES.txt'
+[0.997s] running build
+[0.997s] running build_py
+[0.998s] running install
+[0.999s] running install_lib
+[1.001s] running install_data
+[1.002s] running install_egg_info
+[1.004s] removing '/home/abdelrhman/rov/colcon_ws/install/rov_24/lib/python3.8/site-packages/rov_24-0.0.0-py3.8.egg-info' (and everything under it)
+[1.004s] Copying ../../build/rov_24/rov_24.egg-info to /home/abdelrhman/rov/colcon_ws/install/rov_24/lib/python3.8/site-packages/rov_24-0.0.0-py3.8.egg-info
+[1.005s] running install_scripts
+[1.021s] Installing auto script to /home/abdelrhman/rov/colcon_ws/install/rov_24/lib/rov_24
+[1.021s] Installing bridge script to /home/abdelrhman/rov/colcon_ws/install/rov_24/lib/rov_24
+[1.022s] Installing gui script to /home/abdelrhman/rov/colcon_ws/install/rov_24/lib/rov_24
+[1.022s] Installing joystick script to /home/abdelrhman/rov/colcon_ws/install/rov_24/lib/rov_24
+[1.022s] Installing motion_control script to /home/abdelrhman/rov/colcon_ws/install/rov_24/lib/rov_24
+[1.022s] Installing movement_feedback script to /home/abdelrhman/rov/colcon_ws/install/rov_24/lib/rov_24
+[1.022s] writing list of installed files to '/home/abdelrhman/rov/colcon_ws/build/rov_24/install.log'
+[1.044s] Invoked command in '/home/abdelrhman/rov/colcon_ws/src/rov_24' returned '0': PYTHONPATH=/home/abdelrhman/rov/colcon_ws/build/rov_24/prefix_override:/home/abdelrhman/rov/colcon_ws/install/rov_24/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/rov_24 build --build-base /home/abdelrhman/rov/colcon_ws/build/rov_24/build install --record /home/abdelrhman/rov/colcon_ws/build/rov_24/install.log --single-version-externally-managed
