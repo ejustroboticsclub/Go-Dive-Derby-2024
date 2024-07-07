@@ -24,6 +24,8 @@ ___
 
 If the driver is not installed, you can install it manually. Follow this [link](https://www.nvidia.com/download/index.aspx)
 
-1. **install cudnn**: Follow this [link](https://developer.nvidia.com/cudnn-downloads?target_os=Linux&target_arch=x86_64&Distribution=Ubuntu&target_version=22.04&target_type=deb_local)
 
-1. 
+2. **install cudnn**: Follow this [link](https://developer.nvidia.com/cudnn-downloads?target_os=Linux&target_arch=x86_64&Distribution=Ubuntu&target_version=22.04&target_type=deb_local)
+
+
+3. 
