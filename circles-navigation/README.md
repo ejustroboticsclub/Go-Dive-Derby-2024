@@ -1,5 +1,7 @@
 # ROV Autonomous Navigation and Circle Detection
 
+
+## Overview
 This project involves the development of a system for autonomously navigating a Remotely Operated Vehicle (ROV) through a series of circles using real-time image processing and ROS 2. The system includes real-time circle detection, autonomous control, and a GUI for setting orientations and confirming detected circles. Each circle has a diameter of 80 cm and is positioned 10 cm above the ground. The goal is to successfully navigate each circle without rotating the ROV. 
 
 ## Table of Contents
