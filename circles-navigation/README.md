@@ -53,7 +53,7 @@ ___
 
 5. **`src/control/orientations_and_confirmation.py`**:
    - Provides a GUI for setting circle orientations and confirming detections.
-   - If the user confirms the detected circles, it triggers the autonomous control script.
+   - If the pilot confirms the detected circles, it triggers the autonomous control script.
   
 ___
 ### Requirements
