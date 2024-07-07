@@ -22,10 +22,18 @@ ___
   <img src="images/nvidia_driver.png" width="500" height="300">
 </p>
 
-If the driver is not installed, you can install it manually. Follow this [link](https://www.nvidia.com/download/index.aspx)
+If the driver is not installed, you can install it manually. Follow this [link](https://www.nvidia.com/download/index.aspx).
 
 
-2. **install cudnn**: Follow this [link](https://developer.nvidia.com/cudnn-downloads?target_os=Linux&target_arch=x86_64&Distribution=Ubuntu&target_version=22.04&target_type=deb_local)
+2. **install cudnn**: Follow this [link](https://developer.nvidia.com/cudnn-downloads?target_os=Linux&target_arch=x86_64&Distribution=Ubuntu&target_version=22.04&target_type=deb_local).
 
 
-3. 
+3. **Install cuda toolkit**: Follow this [link](https://developer.nvidia.com/cuda-downloads?target_os=Linux&target_arch=x86_64&Distribution=Ubuntu&target_version=22.04&target_type=deb_local).
+
+4. **Install anaconda**: Follow this [link](https://www.anaconda.com/download/).
+
+5. Create a new environment named GPU.
+```
+conda create -n gpu python=3.9
+```
+
