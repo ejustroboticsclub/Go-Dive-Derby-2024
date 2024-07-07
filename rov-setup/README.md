@@ -113,7 +113,7 @@ ___
     ```
     nano ~/.bashrc
     ```
-    At the end of the file write:
+    At the end of the file, write:
     ```
     alias noetic="source /opt/ros/noetic/setup.bash"
     ```
@@ -191,7 +191,7 @@ ___
     ```
     nano ~/.bashrc
     ```
-    At the end of the file write:
+    At the end of the file, write:
     ```
     export ROS_MASTER_URL="http://192.168.1.69:11311"
     ```
