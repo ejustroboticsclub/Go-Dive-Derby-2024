@@ -6,8 +6,7 @@ This section provides guidelines for setting up the workstation environment nece
 ## Table of Contents
 - [Gstreamer Setup](#gstreamer-setup)
 - [GPU Setup](#gpu-setup)
-
-
+- [ROS Installations](#ros-installations)
 
 ___
 
@@ -95,3 +94,31 @@ If the driver is not installed, you can install it manually. Follow this [link](
     ```
     conda install -c anaconda pandas
     ```
+
+___
+
+## ROS Installations
+
+
+1. **ROS1 Noetic installation**: Follow this [link](#https://wiki.ros.org/noetic/Installation/Ubuntu). [Video](https://www.youtube.com/watch?v=ZA7u2XPmnlo&ab_channel=RoboticsBack-End)
+
+2. **ROS2 Foxy installation**: Follow this [link](#https://docs.ros.org/en/foxy/Installation/Ubuntu-Install-Debians.html). [Video](https://www.youtube.com/watch?v=fxRWY0j3p_U&ab_channel=RoboticsBack-End)
+   
+3. Install ROS1 bridge.
+    ```
+    sudo apt install ros-foxy-ros1-bridge
+    ```
+4. Set the alias for noetic and foxy in the `.bashrc` file.
+    ```
+    nano ~/.bashrc
+    ```
+At the end of the file write:
+    ```
+    alias noetic="source /opt/ros/noetic/setup.bash"
+    ```
+    ```
+    alias foxy="source /opt/ros/foxy/setup.bash"
+    ```
+
+5. 
+
