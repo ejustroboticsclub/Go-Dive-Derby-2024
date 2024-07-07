@@ -9,6 +9,7 @@ This project involves an underwater 2D mapping task using a Remotely Operated Ve
 - [Manual Mapping](#manual-mapping)
 - [Autonomous Mapping](#autonomous-mapping)
 - [Scripts](#scripts)
+- [Requirements](#requirements)
 
 ___
 
@@ -58,3 +59,16 @@ ___
   
 6. **`src/manual-mapping/updated_pygame_using_arrows.py`**
    - This Python script uses Pygame to simulate an interactive map for underwater tomb mapping. It allows users to place and visualize various items such as a cuboid (coffin), cube (treasure chest), and circles (papyrus rolls) on a designated map area.
+  
+___
+
+## Requirements
+
+- **`rospy`**: ROS Python client library for ROS communication.
+- **`tf`**: ROS library for transformations between coordinate frames.
+- **`rclpy`**: ROS 2 Python client library for ROS 2 communication.
+- **`ultralytics`**: (YOLOv8): Deep learning library for object detection.
+- **`opencv-python`**: (cv2): OpenCV library for computer vision tasks.
+- **`multiprocessing`**: Python module for spawning processes using an API similar to threading.
+- **`pygame`**: Library for creating multimedia applications like games and simulations in Python.
+
