@@ -100,9 +100,9 @@ ___
 ## ROS Installations
 
 
-1. **ROS1 Noetic installation**: Follow this [link](#https://wiki.ros.org/noetic/Installation/Ubuntu). [Video](https://www.youtube.com/watch?v=ZA7u2XPmnlo&ab_channel=RoboticsBack-End)
+1. **ROS1 Noetic installation**: Follow this [link](https://wiki.ros.org/noetic/Installation/Ubuntu). A [Video](https://www.youtube.com/watch?v=ZA7u2XPmnlo&ab_channel=RoboticsBack-End)
 
-2. **ROS2 Foxy installation**: Follow this [link](#https://docs.ros.org/en/foxy/Installation/Ubuntu-Install-Debians.html). [Video](https://www.youtube.com/watch?v=fxRWY0j3p_U&ab_channel=RoboticsBack-End)
+2. **ROS2 Foxy installation**: Follow this [link](https://docs.ros.org/en/foxy/Installation/Ubuntu-Install-Debians.html). A [Video](https://www.youtube.com/watch?v=fxRWY0j3p_U&ab_channel=RoboticsBack-End)
    
 3. Install ROS1 bridge.
     ```
