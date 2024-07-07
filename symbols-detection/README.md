@@ -8,7 +8,8 @@ Our team developed an AI model aimed at accurately identifying symbols displayed
 2. [Dataset](#dataset)
 3. [Data Preparation](#data-preparation)
 4. [Results](#results)
-5. [Requirements](#requirements)
+5. [Scripts](#scripts)
+6. [Requirements](#requirements)
 
 ___
 
@@ -61,6 +62,19 @@ reliable to prevent mislabeling symbols, which could distort our interpretation 
 
 From the table, we can see that our model successfully detected all instances of basket, owl, and reed symbols, with only slight losses in other classes. Regarding precision, the model accurately detected nearly all instances without any false positives for the classes of ankh, and basket, with minor losses in the mouth, owl, and reed classes. The slight reductions in precision and recall are acceptable given the competition’s conditions and the hardware limitations.
 
+___
+
+## Scripts
+
+1. **`src/symbols_detection.py`**:
+   - This script provides functionality for symbol detection using the YOLOv8 trained model.
+   - It includes methods for image preprocessing, obtaining predictions, and drawing detections on frames.
+
+2. **`src/real_time_symbols_detection.py`**:
+   - This script enables real-time detection and display of symbols using a camera feed.
+   - It utilizes multiprocessing for efficient frame capture and symbol detection.
+   - It performs symbol detection using the `SymbolsDetector` class, and displays the frames with detected symbols in real-time.
+   - It also provides options to save frames and videos upon user input.
 
 ___
 
