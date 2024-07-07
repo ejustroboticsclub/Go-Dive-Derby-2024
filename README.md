@@ -11,11 +11,13 @@ Ejust Robotics Club proudly presents Shiro Kaijen, our latest Remotely Operated 
 1. [About the Competition](#about-the-competition)
 1. [Software Tasks](#software-tasks) 
 
+___
 
 ## About the Competition
 Small remote-controlled submarine competitions are exciting events that bring together enthusiasts of underwater robotics and engineering. Participants showcase their skills in designing and operating miniature submarines through challenges like obstacle courses, underwater mazes, and simulated missions. Submarines are constructed using lightweight materials and propulsion systems for controlled maneuverability, often equipped with cameras and sensors for real-time feedback. Tasks include agility tests, object retrieval, and navigation through obstacles, fostering creativity, problem-solving, and teamwork among participants. These events promote technical skills and inspire a passion for marine robotics and underwater exploration, emphasizing sustainability and marine ecosystem awareness. <br> <br>
 For detailed rules and guidelines, please refer to the [Competition Rule Book](https://drive.google.com/file/d/1jpSVa2LGZGNbB3ZjQbqmj3Nvcj06yKWg/view?usp=sharing).
 
+___
 
 ## Software Tasks
 
