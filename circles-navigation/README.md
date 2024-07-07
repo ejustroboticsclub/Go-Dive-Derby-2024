@@ -4,15 +4,12 @@ This project involves the development of a system for autonomously navigating a 
 
 ## Table of Contents
 
-- [Project Structure](#project-structure)
-  - [real_time_circles_detection.py](#real_time_circles_detectionpy)
-  - [autonomous_control.py](#autonomous_controlpy)
-  - [orientations_and_confirmation.py](#orientations_and_confirmationpy)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
+- [How it Works?](#how-it-works?)
+- [Scripts](#scripts)
 
+
+
+## How it Works?
 
 Our approach to achieving autonomous navigation through the circles involves several key steps:
 
@@ -34,41 +31,26 @@ Our approach to achieving autonomous navigation through the circles involves sev
    - If confirmed, the system proceeds with autonomous control using the selected orientations.
 
 
-## Project Structure
 
-### `real_time_circles_detection.py`
-This script captures frames from a camera feed and detects circles in real-time using the `CirclesDetector` class.
+## Scripts
+1. **`src/detect/real_time_circles_detection.py`**:
+   - Captures frames from the camera.
+   - Detects circles using the CirclesDetector class.
+   - Displays the detected circles on the frame.
+  
+2. **`src/detect/circles_detector.py`**:
+   - Contains the CirclesDetector class used for detecting circles in frames.
+  
+3. **`src/detect/color_correct.py`**:
+   - Performs color correction on images and videos.
 
-#### Functions
+4. **`src/control/autonomous_control.py`**:
+   - Implements the autonomous control logic for the ROV using ROS 2.
+   - It subscribes to depth information, detects circles, calculates movement directions, and publishes velocity commands.
 
-- **capture_frames(queue, camera_ip)**: Captures frames from the specified camera feed and puts them in a queue.
-- **detect_and_display(queue)**: Detects circles in the frames and displays the feed with detected circles highlighted.
-- **main()**: Initializes the queue and starts the processes for frame capturing and circle detection.
+5. **`src/control/orientations_and_confirmation.py`**:
+   - Provides a GUI for setting circle orientations and confirming detections.
+   - If the user confirms the detected circles, it triggers the autonomous control script.
+  
 
-### `autonomous_control.py`
-This script controls an ROV autonomously using ROS 2, navigating through detected circles.
 
-#### AutomaticController Class
-
-- **depth_callback(msg)**: Callback function for depth subscription.
-- **cmd(dx, dy, dz)**: Sets the velocity command for the ROV.
-- **timer_callback()**: Periodic function to process the current frame and update the ROV's velocity.
-
-#### Functions
-
-- **main(args=None)**: Initializes the ROS 2 node and starts the camera feed and control loop.
-
-### `orientations_and_confirmation.py`
-This script provides a GUI for setting circle orientations and confirming images. It starts the autonomous control script with the specified orientations upon confirmation.
-
-#### GUIsmol Class
-
-- **change_orientations()**: Updates the current orientations based on user input.
-- **confirm_circles()**: Confirms the detected circles and starts the autonomous control script if confirmed.
-
-## Installation
-
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/yourusername/rov-navigation.git
-   cd rov-navigation
