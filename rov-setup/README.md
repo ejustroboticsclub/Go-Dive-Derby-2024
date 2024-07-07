@@ -187,7 +187,13 @@ ___
 
 3. Reconnect to ejust.
 
-4. Add the following lines at the end of the `bashrc` file.
+4. Disable the firewall.
+    ```
+    sudo ufw disable
+    ```
+
+
+5. Add the following lines at the end of the `bashrc` file.
     ```
     nano ~/.bashrc
     ```
@@ -201,7 +207,7 @@ ___
     ```
     export ROS_DOMAIN_IP=5
     ```
-5. Open a terminal and type these commands to run ROS1 roscore:
+6. Open a terminal and type these commands to run ROS1 roscore:
    ```
    noetic
    ```
@@ -209,12 +215,12 @@ ___
    roscore
    ```
   
-6. Open another terminal and type these commands to run ROS1 bridge:
+7. Open another terminal and type these commands to run ROS1 bridge:
    ```
    ros2 run ros1_bridge dynamic_bridge
    ```
 
-7. Open another terminal to access the main Raspberry via ssh, and then type the command that runs all the sensors and thrusters.
+8. Open another terminal to access the main Raspberry via ssh, and then type the command that runs all the sensors and thrusters.
    ```
    ssh ubuntu@192.168.1.120
    ```
@@ -223,18 +229,18 @@ ___
    launch_all
    ```
 
-8. Open another terminal and navigate to the `colcon_ws` directory.
+9. Open another terminal and navigate to the `colcon_ws` directory.
   
-9. If you did not build the workspace before or you changed something inside the workspace, type the following command to build it.
+10. If you did not build the workspace before or you changed something inside the workspace, type the following command to build it.
    ```
    colcon build
    ```
 
-10. Source the setup script.
+11. Source the setup script.
    ```
    source install/setup.bash
    ```
-11. Ensure the Joystick is connected to your device. Then, type the following command to control the ROV via the Joystick.
+12. Ensure the Joystick is connected to your device. Then, type the following command to control the ROV via the Joystick.
    ```
    ros2 launch rov_24 launch_file.launch.py
    ```
