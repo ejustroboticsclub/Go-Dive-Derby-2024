@@ -60,10 +60,10 @@ ___
 
 Before running this project, ensure you have the following dependencies installed:
 
-- **Python 3.7+**
-- **Numpy**
-- **OpenCV**: This is used for real-time video capture, image processing, and circle detection.
-- **Tkinter**: Required for the GUI interface to set circle orientations using radio buttons.
-- **rclpy**: ROS 2 client library for Python, used for communication with the ROV.
-- **ROS 2 Foxy**: Framework for robotic systems development, necessary for ROS 2 operations.
-- **Multiprocessing**: Used for concurrent execution of processes in Python.
+- **`Python 3.7+`**
+- **`Numpy`**
+- **`OpenCV`**: This is used for real-time video capture, image processing, and circle detection.
+- **`Tkinter`**: Required for the GUI interface to set circle orientations using radio buttons.
+- **`rclpy`**: ROS 2 client library for Python, used for communication with the ROV.
+- **`ROS 2 Foxy`**: Framework for robotic systems development, necessary for ROS 2 operations.
+- **`Multiprocessing`**: Used for concurrent execution of processes in Python.
