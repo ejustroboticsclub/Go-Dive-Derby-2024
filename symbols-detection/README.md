@@ -14,7 +14,7 @@ ___
 ## Approach
 We utilized a YOLOv8-based computer vision model trained on a custom dataset containing six hieroglyphic symbols. The development process involved iterative rounds of image preprocessing and model fine-tuning to achieve satisfactory performance aligned with the competition's objectives.
 - The dataset used in training is located at `data/processed`.
-- The results of training are located at`results/`.
+- The results of training are located at `results/`.
 - The best trained model is located at `models/best-models/best.pt`.
 
 ___
