@@ -233,15 +233,15 @@ ___
 
 
 10. If you did not build the workspace before or you changed something inside the workspace, type the following command to build it.
-   ```
-   colcon build
-   ```
+     ```
+     colcon build
+     ```
 
 11. Source the setup script.
-   ```
-   source install/setup.bash
-   ```
+     ```
+     source install/setup.bash
+     ```
 12. Ensure the Joystick is connected to your device. Then, type the following command to control the ROV via the Joystick.
-   ```
-   ros2 launch rov_24 launch_file.launch.py
-   ```
+     ```
+     ros2 launch rov_24 launch_file.launch.py
+     ```
