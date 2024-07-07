@@ -168,7 +168,7 @@ ___
 </p>
 
 
-6. Install tf-transformations
+6. Install tf-transformations.
     ```
     sudo apt install ros-foxy-tf-transformations
     ```
